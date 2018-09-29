@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+<!--    <constant name="struts.devMode" value="true" />-->
+
+    <package name="struts2-velocity" extends="struts-default"  >
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="hello" class="com.daian.ex.controller.LoginAction" method="execute">
+            <result name="success">/HelloWorld.jsp</result>
+        </action>
+
+        <action name="velocity" class="com.daian.ex.controller.VelocityAction" method="execute">
+            <result name="success" type="velocity">/velocity.vm</result>
+        </action>
+
+    </package>
+
+    <package name="manage-velocity" extends="struts-default" namespace="/login" >
+        <action name="login" class="com.daian.ex.controller.LoginAction" method="login" >
+            <result name="success">/main.jsp</result>
+        </action>
+    </package>
+
+</struts>

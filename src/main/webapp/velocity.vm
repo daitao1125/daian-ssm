@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+    <div>
+        <h3>A data binging from action.</h3>
+        Hello, ${name}
+    </div>
+    <h2>Velocity Directives</h2>
+    <div>
+        <h3>`set` directive</h3>
+        #set( $monkey = {"banana" : "good", "roast beef" : "bad"}) ## Map
+        ${monkey}
+    </div>
+</body>
+</html>
