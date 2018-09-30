@@ -5,11 +5,13 @@
 
 <struts>
 
-<!--    <constant name="struts.devMode" value="true" />-->
+    <constant name="struts.devMode" value="true" />
 
     <package name="struts2-velocity" extends="struts-default"  >
+        <default-action-ref name="index.action"></default-action-ref>
+
         <action name="index">
-            <result>/index.jsp</result>
+            <result  type="dispatcher">index.jsp</result>
         </action>
 
         <action name="hello" class="com.daian.ex.controller.LoginAction" method="execute">
