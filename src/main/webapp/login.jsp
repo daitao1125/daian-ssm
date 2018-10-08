@@ -51,7 +51,7 @@
     <title>登录</title>
 </head>
 <body >
-
+login page
 <div class="mydiv">
     <form name="login_form" action="/login/login.action" method="post">
         <table  >

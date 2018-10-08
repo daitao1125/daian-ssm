@@ -8,6 +8,7 @@
     <script src="/js/common.js"></script>
 </head>
 <body>
+index page
 <h1>Welcome To Struts 2!</h1>
 <p><a href="<s:url action='hello'/>">Hello World</a></p>
 <input type="button" onclick="test()" value="测试">

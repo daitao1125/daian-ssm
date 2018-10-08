@@ -3,6 +3,7 @@
     <title>Hello</title>
 </head>
 <body>
+velocity page
     <div>
         <h3>A data binging from action.</h3>
         Hello, ${name}
