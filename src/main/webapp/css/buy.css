@@ -1,0 +1,827 @@
+.buy-container {
+  background-color: #F8FAFC;
+  min-height: -webkit-fill-available;
+  height: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+}
+.buy-container header {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 12px 0px rgba(39, 39, 38, 0.04);
+}
+
+.buy-container header .header-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.buy-container header .header-content .title {
+  float: left;
+  /*margin-left: 19px;*/
+  font-size: 24px;
+  line-height: 80px;
+  color: #3c76ce;
+}
+
+.buy-container header .header-content .title span {
+  color: #3c76ce;
+}
+
+.buy-container header .header-content .introduce-entry {
+  float: right;
+  font-size: 18px;
+  line-height: 80px;
+  margin-right: 32px;
+  position: relative;
+}
+
+.buy-container header .header-content .introduce-entry:after {
+  content: '';
+  border-left: 2px solid #000000;
+  border-top: 2px solid #000000;
+  transform: rotate(135deg);
+  display: block;
+  position: absolute;
+  top: 33px;
+  right: -15px;
+  width: 10px;
+  height: 10px;
+}
+
+.buy-container header .header-content:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.buy-container main {
+  width: 1200px;
+  margin: 20px auto;
+  position: relative;
+  display: block;
+}
+{
+  width: 650px;
+  /*height: 740px;*/
+  background-color: #ffffff;
+  box-shadow: 0px 5px 15px 0px rgba(107, 114, 124, 0.1);
+  padding: 30px 32px;
+  box-sizing: border-box;
+}
+
+.buy-container main .buy-bg {
+  width: 588px;
+  position: absolute;
+  top: 0;
+  right: -38px;
+  height: 508px;
+}
+.buy-container main .buy-bg img {
+  width: 100%;
+  height: 100%;
+}
+
+{
+  position: relative;
+  font-size: 12px;
+  line-height: 12px;
+}
+.buy-container main .form:after {
+  content: '';
+  background: url(/tob/vipTrial_pc/img/vip-logo.jpg) no-repeat;
+  background-size: 100% 100%;
+  width: 266px;
+  height: 159px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.title {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.form-item-label {
+  display: inline-block;
+  width: 76px;
+  vertical-align: middle;
+  line-height: initial;
+  margin-right: initial; 
+  float: initial;
+  font-size: inherit;
+}
+
+ .form-item-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-item:nth-child(1) {
+  margin-top: 30px;
+}
+.form-item:nth-child(2),
+.form-item:nth-child(3)  {
+  line-height: 40px;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
+.form-item:nth-child(4),
+.form-item:nth-child(5),
+.form-item:nth-child(6) {
+  margin-top: 20px;
+  line-height: 18px;
+}
+
+.xieyi {
+  margin-top: 20px;
+  line-height: 18px;
+  height: 18px;
+}
+.buy-button {
+  font-size: 0;
+  margin-top: 14px;
+}
+.buy-button .buy-online {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background-color: #3c76ce;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.buy-button .buy-online input {
+  color: #ffffff;
+  cursor: pointer;
+}
+.buy-button .buy-offline {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: solid 1px #3c76ce;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.buy-button .buy-offline input {
+  color: #3c76ce;
+  cursor: pointer;
+}
+
+.buy-button input {
+  outline: none;
+  line-height: 40px;
+  text-align: center;
+  border: 0;
+  width: 100%;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0);
+  height: 40px;
+}
+
+.invoice-label,
+.xieyi .xieyi-label{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  line-height: initial;
+  margin-right: initial; 
+  float: initial;
+  font-size: inherit;
+}
+.invoice-label span,
+.xieyi .xieyi-label span{
+  color: #3c76ce;
+}
+.invoice-label span {
+  margin-left: 20px;
+  display: none;
+  cursor: pointer;
+}
+ 
+ .pay-type-label {
+  margin-left: 10px;
+  line-height: initial;
+  margin-right: initial; 
+  float: initial;
+  font-size: inherit;
+}
+ .pay-type-input.company {
+  margin-left: 22px;
+}
+
+.form-item .open-time {
+    width: 240px;
+    height: 40px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    line-height: 50px;
+    padding-left: 36px;
+    background: url(/tob/vipTrial_pc/img/date.png) no-repeat;
+    background-size: 18px 18px;
+    background-position-x: 10px;
+    background-position-y: center;
+}
+.input-number {
+  position: relative;
+  width: 240px;
+}
+
+.input-number-decrease.is-disabled,
+.input-number-increase.is-disabled {
+  color: #aaaaaa;
+  cursor: not-allowed;
+}
+.input-number-decrease {
+  left: 1px;
+  border-radius: 2px 0 0 2px;
+  border-right: 1px solid #dddddd;
+}
+.input-number-increase {
+  right: 1px;
+  border-radius: 0 2px 2px 0;
+  border-left: 1px solid #dddddd;
+}
+.input-number-decrease,
+.input-number-increase {
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  width: 40px;
+  height: auto;
+  text-align: center;
+  background: #f4f4f4;
+  color: #333333;
+  cursor: pointer;
+  line-height: 38px;
+}
+
+.input-number-decrease:active,
+.input-number-increase:active {
+  opacity: .5;
+}
+.input-number-decrease.is-disabled:active,
+.input-number-increase.is-disabled:active {
+  opacity: 1;
+}
+
+.icon-minus:before {
+  content: "-";
+  font-size: 24px;
+}
+
+.icon-plus:before {
+  content: "+";
+  font-size: 24px;
+}
+.input-number .input-inner {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+.input-inner {
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  color: #000000;;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  padding: 0 15px;
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  width: 100%;
+}
+.input-number-input.is-disabled .input-inner {
+  color: #353535;
+}
+
+.buy-container .tips .buy-offline-tips,
+.buy-container .tips .invoice-tips{
+  display: none;
+}
+.buy-container .tips .mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 998;
+}
+.buy-container .tips .content{
+  width: 400px;
+  height: 280px;
+  position: fixed;
+  background: #ffffff;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.buy-container .tips .content .title {
+  font-size: 16px;
+  height: 100px;
+  color: #000000;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.buy-container .tips .content .title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 400px;
+  height: 100px;
+  background: url(/tob/vipTrial_pc/img/dialog-invoice.png) no-repeat;
+}
+
+.buy-container .tips .content .title-shop {
+  font-size: 16px;
+  height: 100px;
+  color: #000000;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+}
+.buy-container .tips .content .title-shop:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 400px;
+  height: 100px;
+  background: url(/tob/vipTrial_pc/img/dialog-shop.png) no-repeat;
+}
+
+.buy-container .tips .content .intro {
+  line-height: 30px;
+  font-size: 16px;
+  color: #2576d5;
+  font-weight: 400;
+  text-align: center;
+}
+
+.buy-container .tips .content .intro-shop {
+  margin-top: 40px;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.buy-container .tips .invoice-tips .content .intro {
+  margin-top: 42px;
+}
+.buy-container .tips .content .intro span{
+  color: #3c76ce;
+}
+.buy-container .tips .content .button {
+  color: #fff;
+  font-size: 14px;
+  width: 140px;
+  height: 40px;
+  background-color: #2576d5;
+  border-radius: 4px;
+  border: solid 1px #2576d5;
+  line-height: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  /*margin: 24px auto 0;*/
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  bottom: 30px;
+}
+.buy-container .tips .invoice-tips .content .button {
+  /*margin: 50px auto 0;*/
+}
+
+.buy-container .tips .content .button:active {
+  background-color: rgba(60, 118, 206, .5);
+}
+
+.buy-container .tips .content .close {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  /*border: 1px solid #ffffff;*/
+  position: absolute;
+  top: -48px;
+  right: 0;
+}
+
+.buy-container .tips .close img {
+  width: 100%;
+  height: 100%;
+}
+
+.buy-container .invoice-add-box {
+  display: none;
+}
+.buy-container .invoice-add-box .mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 998;
+}
+.buy-container .invoice-add-box .content{
+  width: 580px;
+  height: 536px;
+  position: fixed;
+  background: #ffffff;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  padding: 20px 0px 20px;
+  box-sizing: border-box;
+}
+
+.buy-container .invoice-add-box .content .title {
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+  text-align: center;
+}
+
+.buy-container .invoice-add-box .content .intro {
+  width: 580px;
+  height: 30px;
+  background-color: #f8f5ea;
+  box-shadow: 0px 1px 0px 0px #f0ecdc, inset 0px 1px 0px 0px #f0ecdc;
+  font-size: 12px;
+  padding-left: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+.buy-container .invoice-add-box .content .intro span {
+  color: #3c76ce;
+}
+.buy-container .invoice-add-box .content .invoice-type {
+  font-size: 12px;
+  line-height: 12px;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+.buy-container .invoice-add-box .content .invoice-type span {
+  font-weight: bold;
+}
+.buy-container .invoice-add-box .content .steps {
+  width: 304px;
+  padding-left: 140px;
+  font-size: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.buy-container .invoice-add-box .content .invoice-add-step {
+  position: relative;
+  display: inline-block;
+}
+.buy-container .invoice-add-box .content .invoice-add-step:last-child {
+  margin-left: 80px;
+}
+.buy-container .invoice-add-box .content .invoice-add-step:last-child:before {
+  content: '';
+  width: 149px;
+  border-top: 2px solid #cccccc;
+  display: block;
+  position: absolute;
+  left: -120px;
+  top: 13px;
+}
+.buy-container .invoice-add-box .content .invoice-add-step:last-child.cur:before {
+  border-top: 2px solid #3c76ce;
+}
+.buy-container .invoice-add-box .content .steps .num {
+  width: 25px;
+  height: 25px;
+  background-color: #cccccc;
+  border: ;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  margin-left: -14px;
+}
+.buy-container .invoice-add-box .content .steps .cur .num {
+  background-color: #3c76ce;
+}
+.buy-container .invoice-add-box .content .steps .desc {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 8px;
+}
+.buy-container .invoice-add-box .content .steps .cur .desc {
+  color: #3c76ce;
+}
+.buy-container .invoice-add-box .content .info-content {
+  font-size: 0;
+  padding-left: 35px;
+  display: none;
+}
+.buy-container .invoice-add-box .content .info-content.active {
+  display: block;
+}
+.buy-container .invoice-add-box .content .info-content label{
+  display: inline-block;
+  width: 88px;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: initial;
+  margin-right: initial; 
+  float: initial;
+}
+.buy-container .invoice-add-box .content .info-content label span{
+  color: #f72424;
+}
+.buy-container .invoice-add-box .content .info-content .form-item-content{
+  display: inline-block;
+  width: 340px;
+  height: 35px;
+  border-radius: 2px;
+  border: solid 1px #dddddd;
+  vertical-align: middle;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.form-item-content-price{
+  position: relative;
+}
+.form-item-content-price:after{
+  content: '';
+  background: url(/tob/vipTrial_pc/img/biaoshi.png) no-repeat;
+  position: absolute;
+  top: -9px;
+  right: -238px;
+  width: 230px;
+  height: 37px;
+}
+.buy-container .invoice-add-box .content .info-content .form-item{
+  margin-top: 8px;
+}
+.buy-container .invoice-add-box .content .info-content .form-item-content input{
+  outline: none;
+  border: 0;
+  padding-left: 10px;
+  height: 100%;
+  width: 320px;
+}
+.buy-container .invoice-add-box .content .info-content .status-tips{
+  display: inline-block;
+  padding-left: 11px;
+  vertical-align: middle;
+}
+.buy-container .invoice-add-box .content .info-content .status-tips-desc{
+  display: inline-block;
+  padding-left: 11px;
+  vertical-align: middle;
+}
+.buy-container .invoice-add-box .content .opt {
+  width: 330px;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  margin-left: -165px;
+}
+.buy-container .invoice-add-box .content .opt:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.buy-container .invoice-add-box .content .opt .left {
+  width: 150px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: solid 1px #000000;
+  text-align: center;
+  line-height: 40px;
+  box-sizing: border-box;
+  float: left;
+  cursor: pointer;
+}
+.buy-container .invoice-add-box .content .opt .right {
+  width: 150px;
+  height: 40px;
+  background-color: #3c76ce;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  float: right;
+  cursor: pointer;
+}
+
+.buy-container .invoice-add-box .content .close {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  position: absolute;
+  top: -27px;
+  right: 3px;
+}
+
+.buy-container .invoice-add-box .close img {
+  width: 100%;
+  height: 100%;
+}
+
+.buy-container .status-tips {
+  font-size: 12px;
+  color: #f72424;
+}
+
+.buy-container .status-tips.fail span{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color:  #e24949;
+  color: #ffffff;
+  line-height: 18px;
+  text-align: center;
+  margin-right: 7px;
+}
+.buy-container .status-tips.success span{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color:  #67c870;
+  margin-right: 7px;
+  position: relative;
+}
+.buy-container .status-tips.success span:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  transform: rotate(-135deg);
+}
+
+
+input[type="checkbox"]{
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  position: relative;
+  float: initial;
+  font-size: inherit;
+}
+
+input[type="checkbox"]:before{
+  border:1px solid #dddddd;
+  border-radius: 2px;
+  content:'';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+input[type="checkbox"]:after{
+  content: '';
+  display: block;
+}
+input[type="checkbox"]:checked:before{
+  border-radius: 2px;
+  border: solid 1px #2676d5;
+}
+input[type="checkbox"]:checked:after{
+  width: 4px;
+  height: 8px;
+  transform: rotate(-135deg);
+  border-top: 2px solid #2676d5;
+  border-left: 2px solid #2676d5;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+input[type="radio"]{
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  position: relative;
+  font-size: inherit;
+  float: initial;
+}
+
+input[type="radio"]:before{
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin-left: -1px;
+}
+input[type="radio"]:after{
+  content: '';
+  display: block;
+}
+input[type="radio"]:checked:before{
+  border-radius: 50%;
+  border: solid 1px #2676d5;
+}
+input[type="radio"]:checked:after{
+  width: 8px;
+  height: 8px;
+  background-color: #2b79d6;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+}
+
+body .layui-laydate .layui-this {
+  background-color: #3c76ce!important;;
+}
+
+.buy-container .open-time-tips-desc {
+    font-size: 12px;
+    line-height: 18px;
+    color: #999999;
+    padding-left: 27px;
+    margin-left: 53px;
+}
+
+.buy-container .open-time-tips-desc:nth-child(1) {
+  background: url(/tob/vipTrial_pc/img/openTips.png) no-repeat;
+  background-size: 16px 16px;
+  margin-top: 10px;
+}
+
+.form-item .open-time input{
+  outline: 0;
+  border: 0;
+  font-size: 12px;
+  line-height: 38px;
+  vertical-align: top;
+  height: 38px;
+}
+
+
+.toast {
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  background: #000000;
+  opacity: .7;
+  text-align: center;
+  padding: 20px 20px;
+  border-radius: 10px;
+  transition: opacity 1s ease-out;
+  z-index: 999;
+}
+
+.toast p{
+  color: #ffffff;
+  font-size: 15px;
+}

@@ -8,15 +8,124 @@
     <script src="/js/common.js"></script>
     <script src="/js/jquery-1.7.js"></script>
     <script src="/js/jquery.blockUI.js"></script>
+
+    <%--<link type="text/css" href="/css/buy.css"  rel="stylesheet"/>--%>
 <style>
-    .current{
-        background-color: red;
+
+    .jianli_apply {
+
+        display: inline-block;
+
+        width: 30px;
+
+        height: 20px;
+
+        border: 1px solid #CCC;
+
+        background: #9c9d9e;
+        margin:0;padding:0;
+
+
+    }
+
+    .increment {
+        float: right;
+        border: 1px solid red;
+        border-left: 0;
+        color: #666;
+    }
+
+
+    .inc{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin: 0;
+        border: 1px solid lightgrey;
+        vertical-align: top;
+        line-height: 20px;
+        font-size: 12px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .dec{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin: 0;
+        border: 1px solid lightgrey;
+        vertical-align: top;
+        line-height: 20px;
+        font-size: 12px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .inp{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 40px;
+        height: 20px;
+        font-size:12px;
+        vertical-align: top;
+        box-sizing: border-box;
     }
 </style>
 
 </head>
 <body>
+<div style="font-size:0;">
 
+    <div class="inc">-</div>
+    <input type="text"  class="inp" value=""
+           onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+           onkeyup="this.value=this.value.replace(/\D/g,'')">
+    <div class="dec">+</div>
+</div>
+<a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_up" class="increment" >+</a>
+
+<br>
+<input type="text" name="asdfasdf">
+<div class="jianli_apply" >
+    <a href="#">-</a>
+</div>
+
+<input type="text"  style="display:inline-block;margin:0;padding:0;width:40px;"   value=""
+       onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+       onkeyup="this.value=this.value.replace(/\D/g,'')">
+
+<br>
+
+<div class="form-item-content">
+    <div class="input-number">
+
+        <span role="button" class="input-number-decrease" data-type="input-number-decrease">
+
+                  <i class="icon-minus"></i>
+                </span>
+        <span role="button" class="input-number-increase" data-type="input-number-increase">
+                  <i class="icon-plus"></i>
+                </span>
+
+        <div class="input-number-input">
+
+            <input type="text" id="userNum" name="userNum" max="100000" min="20" class="input-inner" data-type="input-inner" value=""
+                   onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                   onkeyup="this.value=this.value.replace(/\D/g,'')">
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="quantity-form">
+    <a href="javascript:void(0);" class="decrement disabled" id="decrement_8888_5853579_1_1">-</a>
+    <input autocomplete="off" type="text" class="itxt" value="1" id="changeQuantity_8888_5853579_1_1_0" minnum="1">
+    <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_up" class="increment" id="increment_8888_5853579_1_1_0">+</a>
+</div>
 <div>
     <input type="checkbox" id="che1" name="che" value="1">
     <input type="checkbox"  id="che2"  name="che" value="2">
@@ -40,19 +149,45 @@ index page
 <br>
 <input id="btnTest" type="button" value="提交" onclick="alert(this.id)" />
 <br>
-<h1>Welcome To Struts 2!</h1>
+
 <p><a href="<s:url action='hello'/>">Hello World</a></p>
 <input type="button" onclick="test()" value="测试">
 <br>
 <input id="btnTest1" type="button" value="提交1" onclick="thisTest()" />
-<input id="btnTest2" type="button" value="提交2" />
+<input id="btnTest2" type="button" value="提交2" onclick="alt1()" />
 </body>
 </html>
 <script type="text/javascript">
 
+    //自执行写法1
+    // (function alt1(){
+    //     alert(1);
+    // })();
+
+    // var T1=function(){
+    //     alert(12)
+    // }();
+
+    // var para1='asdf'
+    // var T1=function(obj){
+    //     alert(obj)
+    // }(para1);
+
+    function t2(){
+        alert('t2');
+    }
+
+
+
+
+    // var para1={a:1;b:2,c:'Ok'};
+    // var T1=function(obj){
+    //     alert(obj.a)
+    // }(para1);
 
     function checkAll(obj) {
 
+        alert(obj.value);
         jQuery("div  :checkbox").prop("checked", $(obj).is(':checked'));
         if ($(obj).is(':checked')) {
             jQuery("div").attr("class", "current");
@@ -62,6 +197,7 @@ index page
     }
 
     function viewid() {
+
         var ids = "";
         // $('input:checkbox[name="che"]:checked').each(function(){ //由于复选框一般选中的是多个,所以可以循环输出
         //     alert(this.value);
@@ -73,10 +209,10 @@ index page
         $("input:checkbox[name='che']:checked").each(function () {
             ids += this.value + ",";
         });
-        alert(ids);
-       //$.blockUI({ message: '<h1 style="display: block; background-color: white;" ><img src="busy.gif" onclick="unLock()" /> Just a moment...</h1> <input type="button" id="che1" name="che" onclick="unLock()" value="关闭">' });
+       // alert(ids);
+      $.blockUI({ message: '<h1 style="display: block; background-color: white;" ><img src="busy.gif" onclick="unLock()" /> Just a moment...</h1> <input type="button" id="che1" name="che" onclick="unLock()" value="关闭">' });
 
-        $.blockUI({ message: $('#domMessage') });
+       // $.blockUI({ message: $('#domMessage') });
     }
     
     function unLock() {
