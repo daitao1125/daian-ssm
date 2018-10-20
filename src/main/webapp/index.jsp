@@ -72,24 +72,24 @@
         height: 20px;
         font-size:12px;
         vertical-align: top;
+        text-align:center;
         box-sizing: border-box;
     }
 </style>
 
 </head>
 <body>
-<div style="font-size:0;">
-
-    <div class="inc">-</div>
-    <input type="text"  class="inp" value=""
+<div style="font-size:0; display:inline-block">
+    <div class="inc" onclick="decreaseNum()">-</div>
+    <input type="text" name="buyNum" id="buyNum" class="inp" value=""
            onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
-           onkeyup="this.value=this.value.replace(/\D/g,'')">
-    <div class="dec">+</div>
+           onkeyup="this.value=this.value.replace(/\D/g,'')"  onchange="goPage()" >
+    <div class="inc" onclick="increaseNum()">+</div>
 </div>
 <a href="javascript:void(0);" clstag="clickcart|keycount|xincart|cart_num_up" class="increment" >+</a>
 
 <br>
-<input type="text" name="asdfasdf">
+<input type="text" id="asdf" name="asdfasdf">
 <div class="jianli_apply" >
     <a href="#">-</a>
 </div>
@@ -155,10 +155,43 @@ index page
 <br>
 <input id="btnTest1" type="button" value="提交1" onclick="thisTest()" />
 <input id="btnTest2" type="button" value="提交2" onclick="alt1()" />
+<font color='red' id="finalNeeyPayId">23</font>
 </body>
 </html>
 <script type="text/javascript">
 
+    function decreaseNum() {
+        var aaa='123.34';
+        $("#finalNeeyPayId").html(Number(aaa).toFixed(2));
+        var num = $("#buyNum").val();
+      if( $.isNumeric( num )){
+          if(num<2){
+              $("#buyNum").val(1);
+              return;
+          }else{
+              $("#buyNum").val((num-1));
+          }
+      }else{
+          $("#buyNum").val('1');
+      }
+        goPage();
+    }
+
+
+    function increaseNum() {
+        var num = $("#buyNum").val();
+        if($.isNumeric( num )){
+            $("#buyNum").val((parseInt(num)+1));
+        }else{
+            $("#buyNum").val("1");
+        }
+        goPage();
+    }
+
+    function goPage() {
+        $("#asdf").val($("#buyNum").val());
+    }
+    
     //自执行写法1
     // (function alt1(){
     //     alert(1);
