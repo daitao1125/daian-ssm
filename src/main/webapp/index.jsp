@@ -48,6 +48,8 @@
         font-size: 12px;
         box-sizing: border-box;
         cursor: pointer;
+        margin:1px 0;
+        user-select:none;
     }
 
     .dec{
@@ -74,6 +76,9 @@
         vertical-align: top;
         text-align:center;
         box-sizing: border-box;
+        border:1px solid lightgrey;
+        margin-left:-1px;
+        margin-right:-1px;
     }
 </style>
 
@@ -82,7 +87,7 @@
 <div style="font-size:0; display:inline-block">
     <div class="inc" onclick="decreaseNum()">-</div>
     <input type="text" name="buyNum" id="buyNum" class="inp" value=""
-           onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+           onKeypress="keyPressNum()"
            onkeyup="this.value=this.value.replace(/\D/g,'')"  onchange="goPage()" >
     <div class="inc" onclick="increaseNum()">+</div>
 </div>
@@ -177,6 +182,14 @@ index page
         goPage();
     }
 
+
+    function keyPressNum() {
+        if ( event.keyCode == 13 ){
+            return true;
+        }else{
+            return  (/[\d]/.test(String.fromCharCode(event.keyCode))) ;
+        }
+    }
 
     function increaseNum() {
         var num = $("#buyNum").val();
